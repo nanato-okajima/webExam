@@ -18,11 +18,11 @@
       <div class="form-group">
         <p>性別</p>
         <div class="custom-control custom-radio custom-control-inline">
-          <input class="custom-control-input" type="radio" id="man" name="">
+          <input class="custom-control-input" type="radio" id="man" name="sex" value="1">
           <label class="custom-control-label" for="man">男</label>
         </div>
         <div class="custom-control custom-radio custom-control-inline">
-          <input class="custom-control-input" type="radio" id="woman" name="女">
+          <input class="custom-control-input" type="radio" id="woman" name="sex" value="2">
           <label class="custom-control-label" for="woman">女</label>
         </div>
       </div>
