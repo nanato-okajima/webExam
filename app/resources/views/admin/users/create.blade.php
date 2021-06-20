@@ -6,7 +6,7 @@
 
 @include('admin.users._form', [
   'route' => route('create'),
-  'mode'  => "create"
+  'mode'  => 'create'
 ])
 
 @endsection
