@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 Route::get('/user/create', 'UserController@create')->name('create');
 Route::post('/user/create', 'UserController@store');
+Route::get('/user/edit/{user}', 'UserController@edit')->name('edit');
+Route::post('/user/edit/{user}', 'UserController@update');
