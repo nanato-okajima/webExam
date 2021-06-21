@@ -34,6 +34,21 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'test_datetime' => 'datetime',
+
     ];
+
+    /**
+     * 氏名のフルネーム(姓名)を作成
+     * @return String
+     */
+    public function getFullNameAttribute()
+    {
+        return $this->last_name . " " . $this->first_name;
+    }
+
+    public function getDateTimeAttribute()
+    {
+
+    }
 }

@@ -17,16 +17,23 @@
         <th scope="col">点数</th>
       </thead>
       <tbody>
+        @foreach($users as $user)
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>
+            <a href="{{ route('user.edit', $user) }}">採点</a>
+          </td>
+          <td class="form-check">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" value="{{ $user->id }}" id="check{{ $user->id }}">
+            </div>
+          </td>
+          <td>{{ $user->test_datetime->format('Y年m月d日 H:i:s') }}</td>
+          <td>{{ $user->full_name }}</td>
+          <td>{{ UserConst::GENDER_LIST[$user->gender] }}</td>
+          <td>{{ $user->time . "分" }}</td>
+          <td>{{ $user->score . "点" }}</td>
         </tr>
-
+        @endforeach
       </tbody>
     </table>
   </div>
