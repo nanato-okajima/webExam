@@ -7,7 +7,7 @@
 
       <div class="row">
         <div class="form-group col">
-          <label for="last_name">氏名（性）</label>
+          <label for="last_name">氏名（姓）</label>
           <input class="form-control" type="text" id="last_name" value="">
         </div>
         <div class="form-group col">
@@ -33,7 +33,7 @@
 
       <input class="btn btn-primary" type="submit" value="登録">
       @if ($mode == "edit")
-      <input class="btn btn-delete" type="button" value="削除">
+      <input class="btn btn-danger" type="button" value="削除">
       @endif
     </form>
   </div>

@@ -4,8 +4,8 @@
 
 @section('content')
 
-  @include('admin.layout._form', [
-      'route' => route('edit', $user),
+  @include('admin.users._form', [
+      'route' => route('user.edit', $user),
       'mode'  => 'edit'
   ])
 

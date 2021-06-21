@@ -20,7 +20,7 @@ services:
     image: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: docker_db
+      MYSQL_DATABASE: web_exam
       MYSQL_USER: docker_user
       MYSQL_PASSWORD: docker_pass
     ports:
