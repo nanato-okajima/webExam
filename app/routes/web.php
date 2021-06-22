@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'UserController@index');
+Route::get('/', 'UserController@home')->name('home');
 
 
 Route::get('/user/create', 'UserController@create')->name('user.create');

@@ -1,5 +1,7 @@
 @extends('admin.layouts.base')
 
+@section('title', config('app.name') . '|ホーム')
+
 @section('content')
   <div class="container">
     <div class="fix-buttons">
@@ -20,7 +22,7 @@
         @foreach($users as $user)
         <tr>
           <td>
-            <a href="{{ route('user.edit', $user) }}">採点</a>
+            <a href="#">採点</a>
           </td>
           <td class="form-check">
             <div class="form-check">
