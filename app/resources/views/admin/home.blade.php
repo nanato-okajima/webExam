@@ -31,7 +31,7 @@
           </td>
           <td>{{ $user->test_datetime->format('Y年m月d日 H:i:s') }}</td>
           <td>{{ $user->full_name }}</td>
-          <td>{{ UserConst::GENDER_LIST[$user->gender] }}</td>
+          <td>{{ $user->gender_jp }}</td>
           <td>{{ $user->time . "分" }}</td>
           <td>{{ $user->score . "点" }}</td>
         </tr>
