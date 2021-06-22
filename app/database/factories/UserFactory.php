@@ -25,7 +25,7 @@ $factory->define(User::class, function (Faker $faker) {
         'gender' => $faker->numberBetween($min = 1, $max = 2),
         'score' => $faker->numberBetween($min = 0, $max = 100),
         'time'  => $faker->numberBetween($min = 0, $max = 180),
-        'status' => $faker->numberBetween($min = 0, $max = 4),
+        'status' => $faker->numberBetween($min = 0, $max = 2),
         'token' => $faker->randomNumber(),
         'token_used_flag' => $faker->numberBetween($min = 0, $max = 1),
         'test_datetime' => $faker->dateTime($max = 'now', $timezone = null),
