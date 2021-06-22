@@ -10,13 +10,13 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="nav navbar-brand" href="#">WEB試験システム</a>
+      <a class="nav navbar-brand" href="{{ route('home') }}">WEB試験システム</a>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">ユーザ登録</a>
+          <a class="nav-link" href="{{ route('user.create') }}">ユーザ登録</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">ユーザー一覧</a>
+          <a class="nav-link" href="{{ route('user.index') }}">ユーザー一覧</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">問題一覧</a>

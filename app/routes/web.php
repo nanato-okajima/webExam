@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'UserController@index');
+Route::get('/', 'UserController@home')->name('home');
 
-
+Route::get('/users', 'UserController@index')->name('user.index');
 Route::get('/user/create', 'UserController@create')->name('user.create');
 Route::post('/user/create', 'UserController@store');
 Route::get('/user/edit/{user}', 'UserController@edit')->name('user.edit');

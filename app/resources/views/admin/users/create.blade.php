@@ -5,7 +5,7 @@
 @section('content')
 
 @include('admin.users._form', [
-  'route' => route('create'),
+  'route' => route('user.create'),
   'mode'  => 'create'
 ])
 

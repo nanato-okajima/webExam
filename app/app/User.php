@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Consts\UserConst;
 
 class User extends Authenticatable
 {
@@ -47,8 +48,21 @@ class User extends Authenticatable
         return $this->last_name . " " . $this->first_name;
     }
 
-    public function getDateTimeAttribute()
+    /**
+     * ユーザステータスを日本語名に変換
+     * @return String
+     */
+    public function getUserStatusAttribute()
     {
+        return  UserConst::USER_STATUS_LIST[$this->status];
+    }
 
+    /**
+     * 性別を日本語名に変換
+     * @return String
+     */
+    public function getGenderJpAttribute()
+    {
+        return  UserConst::GENDER_LIST[$this->gender];
     }
 }

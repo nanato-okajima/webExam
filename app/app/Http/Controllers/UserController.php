@@ -7,6 +7,12 @@ use App\User;
 
 class UserController extends Controller
 {
+    public function home()
+    {
+      $users = User::all();
+      return view('admin.home', compact('users'));
+    }
+
     public function index()
     {
       $users = User::all();
