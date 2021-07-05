@@ -20,7 +20,7 @@
           <a href="{{ route('user.edit', $user) }}">編集</a>
         </td>
         <td>
-          <a href="#">採点</a>
+          <a href="{{ route('user.score', $user) }}">採点</a>
         </td>
         <td>{{ $user->user_status }}</td>
         <td>{{ $user->updated_at->format('Y年m月d日') }}</td>

@@ -28,4 +28,9 @@ class UserController extends Controller
     {
         return view('admin.users.edit', compact('user'));
     }
+
+    public function score(User $user)
+    {
+        return view('admin.users.score', compact('user'));
+    }
 }
