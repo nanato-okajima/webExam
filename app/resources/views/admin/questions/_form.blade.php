@@ -28,7 +28,7 @@
       <button class="btn btn-outline-primary" @click.prevent="selectFormType('select', $event)">select</button>
     </div>
     <div v-show="showForm">
-      <button>+</button>
+      <button @click="createForm">+</button>
       <question-form></question-form>
     </div>
   </div>

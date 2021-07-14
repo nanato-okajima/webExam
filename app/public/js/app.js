@@ -1936,9 +1936,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      isChoice: false,
+      formType: [],
       form: {
         label_position: 1,
         label: "",
@@ -19649,148 +19653,166 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [
-      _c("div", { staticClass: "form-group row" }, [
-        _c(
-          "label",
-          {
-            staticClass: "col-sm-2 col-form-label",
-            attrs: { for: "label_position" }
-          },
-          [_vm._v("ラベル位置")]
-        ),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.label_position,
-                expression: "form.label_position"
-              }
-            ],
-            staticClass: "col-sm-10",
-            attrs: { name: "label_positon", id: "label_position" },
-            on: {
-              change: function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.$set(
-                  _vm.form,
-                  "label_position",
-                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                )
-              }
-            }
-          },
-          [
-            _c("option", { attrs: { value: "1" } }, [_vm._v("前")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "2" } }, [_vm._v("後")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("無し")])
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group row" }, [
-        _c(
-          "label",
-          { staticClass: "col-sm-2 col-form-label", attrs: { for: "label" } },
-          [_vm._v("ラベル")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
+    _vm._l(_vm.formType, function(form) {
+      return _c("div", { key: form }, [
+        _c("div", { staticClass: "form-group row" }, [
+          _c(
+            "label",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.label,
-              expression: "form.label"
-            }
-          ],
-          staticClass: "col-sm-10",
-          attrs: { type: "text", name: "label", id: "label" },
-          domProps: { value: _vm.form.label },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.form, "label", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group row" }, [
-        _c(
-          "label",
-          { staticClass: "col-sm-2 col-form-label", attrs: { for: "answer" } },
-          [_vm._v("答え")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
+              staticClass: "col-sm-2 col-form-label",
+              attrs: { for: "label_position" }
+            },
+            [_vm._v("ラベル位置")]
+          ),
+          _vm._v(" "),
+          _c(
+            "select",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.answer,
-              expression: "form.answer"
-            }
-          ],
-          staticClass: "col-sm-10",
-          attrs: { type: "text", name: "answer", id: "answer" },
-          domProps: { value: _vm.form.answer },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: form.label_position,
+                  expression: "form.label_position"
+                }
+              ],
+              staticClass: "col-sm-10",
+              attrs: { name: "label_positon", id: "label_position" },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    form,
+                    "label_position",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                }
               }
-              _vm.$set(_vm.form, "answer", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      [
-        _c("button", [_vm._v("＋")]),
+            },
+            [
+              _c("option", { attrs: { value: "1" } }, [_vm._v("前")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "2" } }, [_vm._v("後")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "3" } }, [_vm._v("無し")])
+            ]
+          )
+        ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "choice" } }, [_vm._v("選択肢")]),
+        _c("div", { staticClass: "form-group row" }, [
+          _c(
+            "label",
+            { staticClass: "col-sm-2 col-form-label", attrs: { for: "label" } },
+            [_vm._v("ラベル")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.form.choice,
-                expression: "form.choice"
+                value: form.label,
+                expression: "form.label"
               }
             ],
-            attrs: { type: "text", name: "choice", id: "choice" },
-            domProps: { value: _vm.form.choice },
+            staticClass: "col-sm-10",
+            attrs: { type: "text", name: "label", id: "label" },
+            domProps: { value: form.label },
             on: {
               input: function($event) {
                 if ($event.target.composing) {
                   return
                 }
-                _vm.$set(_vm.form, "choice", $event.target.value)
+                _vm.$set(form, "label", $event.target.value)
               }
             }
           })
-        ])
-      ]
-    ],
-    2
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group row" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 col-form-label",
+              attrs: { for: "answer" }
+            },
+            [_vm._v("答え")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: form.answer,
+                expression: "form.answer"
+              }
+            ],
+            staticClass: "col-sm-10",
+            attrs: { type: "text", name: "answer", id: "answer" },
+            domProps: { value: form.answer },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(form, "answer", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.isChoice,
+                expression: "isChoice"
+              }
+            ]
+          },
+          [
+            _c("button", [_vm._v("＋")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "choice" } }, [_vm._v("選択肢")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: form.choice,
+                    expression: "form.choice"
+                  }
+                ],
+                attrs: { type: "text", name: "choice", id: "choice" },
+                domProps: { value: form.choice },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(form, "choice", $event.target.value)
+                  }
+                }
+              })
+            ])
+          ]
+        )
+      ])
+    }),
+    0
   )
 }
 var staticRenderFns = []
@@ -32045,12 +32067,12 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     selectFormType: function selectFormType(formType, e) {
       this.showForm = true;
       e.target.classList.add("active");
-      console.log(e.target);
 
       if (formType === "radio" || formType === "select") {
         this.choice = true;
       }
-    }
+    },
+    createForm: function createForm() {}
   }
 });
 

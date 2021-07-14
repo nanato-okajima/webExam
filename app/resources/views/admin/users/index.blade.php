@@ -24,7 +24,7 @@
         </td>
         <td>{{ $user->user_status }}</td>
         <td>{{ $user->updated_at->format('Y年m月d日') }}</td>
-        <td>{{ $user->test_datetime->format('n月j日') }}</td>
+        <td>{{ isset($user->test_datetime) ? $user->test_datetime->format('Y年m月d日') : '' }}</td>
         <td>{{ $user->full_name }}</td>
         <td>{{ $user->score }}点</td>
         <td>{{ $user->gender_jp }}</td>

@@ -19,7 +19,8 @@ Route::get('/users', 'UserController@index')->name('user.index');
 Route::get('/user/create', 'UserController@create')->name('user.create');
 Route::post('/user/create', 'UserController@store');
 Route::get('/user/edit/{user}', 'UserController@edit')->name('user.edit');
-Route::post('/user/edit/{user}', 'UserController@update');
+Route::put('/user/edit/{user}', 'UserController@update');
+Route::delete('/user/delete/{user}', 'UserController@delete')->name('user.delete');
 Route::get('/user/score/{user}', 'UserController@score')->name('user.score');
 
 Route::get('/questions', 'QuestionController@index')->name('question.index');

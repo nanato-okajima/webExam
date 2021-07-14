@@ -20,11 +20,13 @@ new Vue({
     selectFormType(formType, e) {
       this.showForm = true;
       e.target.classList.add("active");
-      console.log(e.target)
 
       if (formType === "radio" || formType === "select") {
         this.choice = true;
       }
+    },
+    createForm() {
+
     }
   }
 });

@@ -11,12 +11,14 @@
 
     <table class="table table-bordered table-hover">
       <thead class="thead-dark">
-        <th scope="col" colspan="2"></th>
-        <th scope ="col">受験日</th>
-        <th scope="col">氏名</th>
-        <th scope="col">性別</th>
-        <th scope="col">経過時間</th>
-        <th scope="col">点数</th>
+        <tr>
+          <th scope="col" colspan="2"></th>
+          <th scope ="col">受験日</th>
+          <th scope="col">氏名</th>
+          <th scope="col">性別</th>
+          <th scope="col">経過時間</th>
+          <th scope="col">点数</th>
+        </tr>
       </thead>
       <tbody>
         @foreach($users as $user)

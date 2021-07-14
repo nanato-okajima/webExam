@@ -19,12 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('first_name');
             $table->tinyInteger('age')->unsigned();
             $table->tinyInteger('gender')->unsigned();
-            $table->tinyInteger('score')->unsigned();
-            $table->tinyInteger('time')->unsigned();
-            $table->tinyInteger('status')->unsigned();
-            $table->string('token');
-            $table->tinyInteger('token_used_flag')->unsigned();
-            $table->dateTime('test_datetime');
+            $table->tinyInteger('score')->unsigned()->nullable();
+            $table->tinyInteger('time')->unsigned()->nullable();
+            $table->tinyInteger('status')->unsigned()->default(0);
+            $table->string('token')->nullable();
+            $table->tinyInteger('token_used_flag')->unsigned()->default(0);
+            $table->dateTime('test_datetime')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
